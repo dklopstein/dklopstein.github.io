@@ -1,16 +1,239 @@
+<!--
+Author: Derek Klopstein
+Sources:
+https://www.w3schools.com/howto/howto_css_timeline.asp 
+https://pqina.nl/blog/applying-a-circular-crop-mask-to-an-image/
+https://stackoverflow.com/questions/12991164/maintaining-the-final-state-at-end-of-a-css-animation
+https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode
+https://www.w3schools.com/cssref/pr_pos_left.php
+https://www.w3schools.com/css/css3_animations.asp
+https://blog.hubspot.com/website/call-javascript-function-html#:~:text=The%20simplest%20way%20to%20call,interacts%20with%20a%20page%20element.
+
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-AU-Compatible" context="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>MAIN PAGE</title>
+    <title>The Life of Derek Klopstein</title>
+
+    <script>
+        var str1 = 'On December 12, 2019, the first few victims of COVID-19 were discovered.' +
+        ' As modern medicine had no effects on the patients, more research was ' + 
+        'done towards curing the illness and preventing an outbreak. However, ' + 
+        'despite the efforts of many, an outbreak still happened. It seems so ' + 
+        'far away now, but I still remember it like it just happened.';
+
+        function dateMessage(string, id) {
+          document.getElementById(id).innerHTML = string;
+        }
+    </script>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Welcome to my personal website!</h1>
+    
+    <div class="title">
+        <h1><center><font size="+7">The Life of Derek Klopstein</font></center></h1>
     </div>
+    
+    <div class="container">
+        <img src="images/covid.JPG" id = 'pic', 
+            onclick="document.getElementById('pic').className += 'picAnim'; setTimeout(function (string, id) {
+                document.getElementById(id).innerHTML = string;
+            }, 2000, str1, '1');">
+
+        <div class="text">
+            <div id="1"></div>
+        </div>
+    </div>
+
 </body>
 
 </html>
+
+
+<style>
+    *{
+        color: black;
+
+    }
+
+    @keyframes left {
+        0% {left: 0%;}
+        100% {left: -25%;}
+    }
+
+    .anim {
+        animation: leftright 2s linear;
+    }
+
+    .picAnim {
+        animation: left 2s forwards;
+    }
+
+    img {
+            position: relative;    
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+    .text {
+        position: absolute;
+        font-size: 20px;
+        padding-left: 40%;
+        padding-top: 0%;
+        padding-right: 10%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+<!--
+<style>
+    * {
+        /* https://www.w3schools.com/howto/howto_css_timeline.asp */
+  box-sizing: border-box;
+  color: #000000;
+}
+
+/* Set a background color */
+body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+</style>
+-->
