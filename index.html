@@ -22,15 +22,15 @@ https://blog.hubspot.com/website/call-javascript-function-html#:~:text=The%20sim
     <title>The Life of Derek Klopstein</title>
 
     <script>
-        var str1 = 'On December 12, 2019, the first few victims of COVID-19 were discovered.' +
-        ' As modern medicine had no effects on the patients, more research was ' + 
-        'done towards curing the illness and preventing an outbreak. However, ' + 
-        'despite the efforts of many, an outbreak still happened. It seems so ' + 
-        'far away now, but I still remember it like it just happened.';
-
-        function dateMessage(string, id) {
-          document.getElementById(id).innerHTML = string;
-        }
+        var str1 = '<font color="green"><b>December 12, 2019:</b><br>On December 12, 2019, the first few victims of COVID-19 were discovered. As modern medicine had no effects on the patients, more research was done towards curing the illness and preventing an outbreak. However, despite the efforts of many, an outbreak still happened. It seems so far away now, but I still remember it like it just happened.'
+        var str2 = '<font color="green"><b>March 17, 2020:</b><br>We were dismissed for spring break my junior year of high school, but little did I know that we wouldn’t be able to return until almost the end of my senior year. An introverted homebody like me was kind of excited to stay home and just play online games with friends all day, but once that excitement burnt out, I slowly began to realize the situation we were in. I had given up trying in most of my classes, doing the bare minimum to do well; I didn’t participate a lot when teachers asked questions, even when I was really confident in my answers; I took not even ten minute naps between classes because I was exhausted from living the same way every single day. Even though everything felt like it had paused in my surroundings, just like the video games I kept playing, life was still moving. '
+        var str3 = '<font color="green"><b>January 12, 2021:</b><br>I’d say it’s a lot harder to break habits, than to create new ones. It took me a long time to finally try new things during this isolated period of my life, but rather than continuing the same routine of games and homework, I picked up the book that I always wanted to read, I learned how to juggle, tried more advanced projects in some of my classes, and played a lot of tennis. It was during these moments of self-discovery and practice that I started to understand the true meaning of growth.'
+        var str4 = '<font color="green"><b>April 11, 2021:</b><br>After long deliberation on whether or not to attend community college or a four year university, I committed to the University of California, San Diego. Leaving behind the relationships I worked so hard to create and maintain for most of my life was hard for me; however, the pandemic reminded me that new experiences, or trying new things, were an opportunity to grow.'
+        var str5 = '<font color="green"><b>September 12, 2023:</b><br>Despite not knowing anyone coming to UCSD, the first few weeks I made some of the most valuable friendships I could have to start off college. I had become really quiet and my social anxiety had grown from not having a lot of connection during the pandemic, but the people I met motivated me to be a better student, get out of my comfort zone, and be a better person and friend to them. They inspired me to make new friends in classes and talk to more people. I felt proud that I was actively participating in some classes now, rather than just sitting back and passively listening. '
+        var str6 = '<font color="green"><b>July 6, 2023:</b><br>As my friends helped me gather up my courage, I applied and got a job working as a mentor for students interested in data science, but I’d have to fly to Georgia Tech. I’d been on an airplane twice before in my life, so I was very unfamiliar with flying procedures and I’d never been that far away from California either. Despite my worries, I made the trip anyway. Traveling there was so far out of my comfort zone, and even though I knew this would be a chance for me to grow more, every nerve in my body told me to go home. '
+        var str7 = '<font color="green"><b>July 31, 2023:</b><br>At the start of the conference, I trained alongside other mentors who were in the same situation as me. Putting that into perspective made the whole thing a lot less stressful, and a lot more enjoyable. They were way more than just fellow mentors for just the students, they felt like a mentor for me as well. They answered all my questions, never once making me feel bad about asking for help. The students also taught me a great deal about myself, which I never thought could happen. By the end of the conference, I had learned so much about myself and others, and I was less afraid of asking for help, which I had struggled with my whole life. '
+        var str8 = '<font color="green"><b>October 27, 2023:</b><br>Now that I’m in my third year of college, it feels as if time is continuing to speed up. People and experiences I once knew yesterday are forgotten, and some of those memories are ones I never want to forget. When I look back on my life some years into the future, I want to be able to say this is why or who I’m most grateful for making me who I am today. '
+        
     </script>
 </head>
 
@@ -38,18 +38,109 @@ https://blog.hubspot.com/website/call-javascript-function-html#:~:text=The%20sim
     
     <div class="title">
         <h1><center><font size="+7">The Life of Derek Klopstein</font></center></h1>
+        <p><center>Click the Images to Reveal Text</center></p>
     </div>
-    
-    <div class="container">
-        <img src="images/covid.JPG" id = 'pic', 
-            onclick="document.getElementById('pic').className += 'picAnim'; setTimeout(function (string, id) {
-                document.getElementById(id).innerHTML = string;
-            }, 2000, str1, '1');">
 
-        <div class="text">
+
+    <div class="container">
+        <img src="images/black.png" id = 'p1', 
+            onclick="document.getElementById('p1').className += 'picLeft'; setTimeout(function () {
+                document.getElementById('1').innerHTML = str1;
+                document.getElementById('1').className += 'textAnim';
+            }, 1500); ">
+
+        <div class="textLeft">
             <div id="1"></div>
         </div>
     </div>
+
+    <div class="container">
+        <img src="images/black.png" id = 'p2', 
+            onclick="document.getElementById('p2').className += 'picRight'; setTimeout(function () {
+                document.getElementById('2').innerHTML = str2;
+                document.getElementById('2').className += 'textAnim';
+            }, 1500); ">
+
+        <div class="textRight">
+            <div id="2"></div>
+        </div>
+    </div>
+
+    <div class="container">
+      <img src="images/black.png" id = 'p3', 
+          onclick="document.getElementById('p3').className += 'picLeft'; setTimeout(function () {
+              document.getElementById('3').innerHTML = str3;
+              document.getElementById('3').className += 'textAnim';
+          }, 1500); ">
+
+      <div class="textLeft">
+          <div id="3"></div>
+      </div>
+  </div>
+
+  <div class="container">
+      <img src="images/black.png" id = 'p4', 
+          onclick="document.getElementById('p4').className += 'picRight'; setTimeout(function () {
+              document.getElementById('4').innerHTML = str4;
+              document.getElementById('4').className += 'textAnim';
+          }, 1500); ">
+
+      <div class="textRight">
+          <div id="4"></div>
+      </div>
+  </div>
+
+  <div class="container">
+    <img src="images/black.png" id = 'p5', 
+        onclick="document.getElementById('p5').className += 'picLeft'; setTimeout(function () {
+            document.getElementById('5').innerHTML = str5;
+            document.getElementById('5').className += 'textAnim';
+        }, 1500); ">
+
+    <div class="textLeft">
+        <div id="5"></div>
+    </div>
+</div>
+
+<div class="container">
+    <img src="images/black.png" id = 'p6', 
+        onclick="document.getElementById('p6').className += 'picRight'; setTimeout(function () {
+            document.getElementById('6').innerHTML = str6;
+            document.getElementById('6').className += 'textAnim';
+        }, 1500); ">
+
+    <div class="textRight">
+        <div id="6"></div>
+    </div>
+</div>
+
+<div class="container">
+  <img src="images/black.png" id = 'p7', 
+      onclick="document.getElementById('p7').className += 'picLeft'; setTimeout(function () {
+          document.getElementById('7').innerHTML = str7;
+          document.getElementById('7').className += 'textAnim';
+      }, 1500); ">
+
+  <div class="textLeft">
+      <div id="7"></div>
+  </div>
+</div>
+
+<div class="container">
+  <img src="images/black.png" id = 'p8', 
+      onclick="document.getElementById('p8').className += 'picRight'; setTimeout(function () {
+          document.getElementById('8').innerHTML = str8;
+          document.getElementById('8').className += 'textAnim';
+      }, 1500); ">
+
+  <div class="textRight">
+      <div id="8"></div>
+  </div>
+</div>
+
+<div class="container">
+  <img src="images/black.png" id = 'p9'">
+</div>
 
 </body>
 
@@ -64,15 +155,30 @@ https://blog.hubspot.com/website/call-javascript-function-html#:~:text=The%20sim
 
     @keyframes left {
         0% {left: 0%;}
-        100% {left: -25%;}
+        100% {left: -30%;}
     }
 
-    .anim {
-        animation: leftright 2s linear;
+    @keyframes right {
+        0% {right: 0%;}
+        100% {right: -30%;}
     }
 
-    .picAnim {
+    @keyframes fadeinout{
+        0% { opacity: 0; }
+        50% { opacity: 0; }
+        100% { opacity: 1;}
+    }
+
+    .textAnim {
+        animation: fadeinout 2s linear forwards;
+    }
+
+    .picLeft {
         animation: left 2s forwards;
+    }
+
+    .picRight {
+        animation: right 2s forwards;
     }
 
     img {
@@ -83,157 +189,28 @@ https://blog.hubspot.com/website/call-javascript-function-html#:~:text=The%20sim
             border-radius: 50%;
         }
 
-    .text {
+    .textLeft {
         position: absolute;
+        line-height: 2;
         font-size: 20px;
         padding-left: 40%;
         padding-top: 0%;
         padding-right: 10%;
     }
 
+    .textRight {
+        position: absolute;
+        line-height: 2;
+        font-size: 20px;
+        padding-left: 10%;
+        padding-top: 0%;
+        padding-right: 40%;
+    }
+
     .container {
+        padding-top: 7.5%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 </style>
-<!--
-<style>
-    * {
-        /* https://www.w3schools.com/howto/howto_css_timeline.asp */
-  box-sizing: border-box;
-  color: #000000;
-}
-
-/* Set a background color */
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
-
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-/* Place the container to the left */
-.left {
-  left: 0;
-}
-
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
-
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-/* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
-
-/* Full-width containers */
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-/* Make sure that all arrows are pointing leftwards */
-  .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-/* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
-  }
-
-/* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
-}
-</style>
--->
