@@ -1,15 +1,13 @@
 <!--
 Author: Derek Klopstein
+Since: 13 Febuary 2024
 Sources:
-https://www.w3schools.com/howto/howto_css_timeline.asp 
-https://pqina.nl/blog/applying-a-circular-crop-mask-to-an-image/
-https://stackoverflow.com/questions/12991164/maintaining-the-final-state-at-end-of-a-css-animation
-https://developer.mozilla.org/en-US/docs/Web/CSS/animation-fill-mode
-https://www.w3schools.com/cssref/pr_pos_left.php
-https://www.w3schools.com/css/css3_animations.asp
-https://blog.hubspot.com/website/call-javascript-function-html#:~:text=The%20simplest%20way%20to%20call,interacts%20with%20a%20page%20element.
-https://www.w3schools.com/js/js_loop_for.asp
-
+https://www.freecodecamp.org/news/html-button-type-how-to-add-buttons-to-your-website/
+https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_font
+https://www.w3schools.com/howto/howto_css_center_button.asp
+https://stackoverflow.com/questions/66214478/how-to-make-button-move-to-new-position-on-hover
+https://stackoverflow.com/questions/19609387/change-image-when-clicking-button
+https://www.dofactory.com/html/button/hidden
 -->
 
 
@@ -20,142 +18,47 @@ https://www.w3schools.com/js/js_loop_for.asp
     <meta charset="UTF-8">
     <meta http-equiv="X-AU-Compatible" context="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Life of Derek Klopstein</title>
-
-    <script>
-        var str1 = '<b>December 12, 2019:</b><br>On December 12, 2019, the first few victims of COVID-19 were discovered. As modern medicine had no effects on the patients, more research was done towards curing the illness and preventing an outbreak. However, despite the efforts of many, an outbreak still happened. It seems so far away now, but I still remember it like it just happened.'
-        var str2 = '<b>March 17, 2020:</b><br>We were dismissed for spring break my junior year of high school, but little did I know that we wouldn’t be able to return until almost the end of my senior year. An introverted homebody like me was kind of excited to stay home and just play online games with friends all day, but once that excitement burnt out, I slowly began to realize the situation we were in. I had given up trying in most of my classes, doing the bare minimum to do well; I didn’t participate a lot when teachers asked questions, even when I was really confident in my answers; I took not even ten minute naps between classes because I was exhausted from living the same way every single day. Even though everything felt like it had paused in my surroundings, just like the video games I kept playing, life was still moving. '
-        var str3 = '<b>January 12, 2021:</b><br>I’d say it’s a lot harder to break habits, than to create new ones. It took me a long time to finally try new things during this isolated period of my life, but rather than continuing the same routine of games and homework, I picked up the book that I always wanted to read, I learned how to juggle, tried more advanced projects in some of my classes, and played a lot of tennis. It was during these moments of self-discovery and practice that I started to understand the true meaning of growth.'
-        var str4 = '<b>April 11, 2021:</b><br>After long deliberation on whether or not to attend community college or a four year university, I committed to the University of California, San Diego. Leaving behind the relationships I worked so hard to create and maintain for most of my life was hard for me; however, the pandemic reminded me that new experiences, or trying new things, were an opportunity to grow.'
-        var str5 = '<b>September 12, 2023:</b><br>Despite not knowing anyone coming to UCSD, the first few weeks I made some of the most valuable friendships I could have to start off college. I had become really quiet and my social anxiety had grown from not having a lot of connection during the pandemic, but the people I met motivated me to be a better student, get out of my comfort zone, and be a better person and friend to them. They inspired me to make new friends in classes and talk to more people. I felt proud that I was actively participating in some classes now, rather than just sitting back and passively listening. '
-        var str6 = '<b>July 6, 2023:</b><br>As my friends helped me gather up my courage, I applied and got a job working as a mentor for students interested in data science, but I’d have to fly to Georgia Tech. I’d been on an airplane twice before in my life, so I was very unfamiliar with flying procedures and I’d never been that far away from California either. Despite my worries, I made the trip anyway. Traveling there was so far out of my comfort zone, and even though I knew this would be a chance for me to grow more, every nerve in my body told me to go home. '
-        var str7 = '<b>July 31, 2023:</b><br>At the start of the conference, I trained alongside other mentors who were in the same situation as me. Putting that into perspective made the whole thing a lot less stressful, and a lot more enjoyable. They were way more than just fellow mentors for just the students, they felt like a mentor for me as well. They answered all my questions, never once making me feel bad about asking for help. The students also taught me a great deal about myself, which I never thought could happen. By the end of the conference, I had learned so much about myself and others, and I was less afraid of asking for help, which I had struggled with my whole life. '
-        var str8 = '<b>October 27, 2023:</b><br>Now that I’m in my third year of college, it feels as if time is continuing to speed up. People and experiences I once knew yesterday are forgotten, and some of those memories are ones I never want to forget. When I look back on my life some years into the future, I want to be able to say this is why or who I’m most grateful for making me who I am today. '
-        
-    </script>
+    <title>Will you be my Valentine?</title>
 </head>
 
 <body>
-    
     <div class="title">
-        <h1><center><font size="+7">The Life of Derek Klopstein</font></center></h1>
-        <p><center>Click the Images to Reveal Text</center></p>
-    </div>
-
-
-    <div class="container">
-        <img src="images/covid19.png" id = 'p1', 
-            onclick="document.getElementById('p1').classList.add('picLeft'); setTimeout(function () {
-                document.getElementById('1').innerHTML = str1;
-                document.getElementById('1').classList.add('textAnim');
-            }, 1500); ">
-
-        <div class="textLeft">
-            <div id="1"></div>
-        </div>
+        <p style="font-family: Brush Script MT; font-size:5vw; text-align:center" id="updateText">Will you be my Valentine?</p>
     </div>
 
     <div class="container">
-        <img src="images/zoom.JPG" id = 'p2', 
-            onclick="document.getElementById('p2').classList.add('picRight'); setTimeout(function () {
-                document.getElementById('2').innerHTML = str2;
-                document.getElementById('2').classList.add('textAnim');
-            }, 1500); ">
-
-        <div class="textRight">
-            <div id="2"></div>
-        </div>
+        <img id="toChange" src="images/flower.gif"
+            width = "400"
+            height = "300"
+        />
+        <!-- <img src="images/kiss.gif"
+            width = "500"
+            height = "400"
+        /> -->
+    </div>
+    <div class="buttons">
+        <p style="font-family: Brush Script MT; font-size:5vw; text-align:center" id="updateYes"></p>
+        <button class="button yes" id="yes">Yes</button>
+        <button class="button no" id="no">No</button>
     </div>
 
-    <div class="container">
-      <img src="images/tennis.jpeg" id = 'p3', 
-          onclick="document.getElementById('p3').classList.add('picLeft'); setTimeout(function () {
-              document.getElementById('3').innerHTML = str3;
-              document.getElementById('3').classList.add('textAnim');
-          }, 1500); ">
+    <script>
+        const no = document.getElementById('no');
+        no.addEventListener('mouseover', function () {
+            no.style.left = `${Math.ceil(Math.random() * 90)}%`;
+            no.style.top = `${Math.ceil(Math.random() * 90)}%`;
+        });
 
-      <div class="textLeft">
-          <div id="3"></div>
-      </div>
-  </div>
-
-  <div class="container">
-      <img src="images/ucsd.jpeg" id = 'p4', 
-          onclick="document.getElementById('p4').classList.add('picRight'); setTimeout(function () {
-              document.getElementById('4').innerHTML = str4;
-              document.getElementById('4').classList.add('textAnim');
-          }, 1500); ">
-
-      <div class="textRight">
-          <div id="4"></div>
-      </div>
-  </div>
-
-  <div class="container">
-    <img src="images/ucsd friends.jpg" id = 'p5', 
-        onclick="document.getElementById('p5').classList.add('picLeft'); setTimeout(function () {
-            document.getElementById('5').innerHTML = str5;
-            document.getElementById('5').classList.add('textAnim');
-        }, 1500); ">
-
-    <div class="textLeft">
-        <div id="5"></div>
-    </div>
-</div>
-
-<div class="container">
-    <img src="images/plane.png" id = 'p6', 
-        onclick="document.getElementById('p6').classList.add('picRight'); setTimeout(function () {
-            document.getElementById('6').innerHTML = str6;
-            document.getElementById('6').classList.add('textAnim');
-        }, 1500); ">
-
-    <div class="textRight">
-        <div id="6"></div>
-    </div>
-</div>
-
-<div class="container">
-  <img src="images/staff.jpg" id = 'p7', 
-      onclick="document.getElementById('p7').classList.add('picLeft'); setTimeout(function () {
-          document.getElementById('7').innerHTML = str7;
-          document.getElementById('7').classList.add('textAnim');
-      }, 1500); ">
-
-  <div class="textLeft">
-      <div id="7"></div>
-  </div>
-</div>
-
-<div class="container">
-  <img src="images/end.jpeg" id = 'p8', 
-      onclick="document.getElementById('p8').classList.add('picRight'); setTimeout(function () {
-          document.getElementById('8').innerHTML = str8;
-          document.getElementById('8').classList.add('textAnim');
-      }, 1500); ">
-
-  <div class="textRight">
-      <div id="8"></div>
-  </div>
-</div>
-
-<!-- <div class="container">
-  <img src="images/black.png" id = 'p9', onclick="
-      for (let i = 1; i < 9; i++) {
-        document.getElementById(i.toString()).classList.remove('textAnim');
-        document.getElementById(i.toString()).classList.add('textClear');
-      }
-      
-      document.getElementById('8').innerHTML = '';
-      document.getElementById('p8').className.remove('picRight');
-      
-      document.getElementById('p8').animate('picLeft')
-
-    ">
-</div> -->
-
+        const yes = document.getElementById('yes');
+        yes.addEventListener('click', function () {
+            document.getElementById('toChange').src="images/kiss.gif";
+            document.getElementById('updateText').textContent="YIPPEEEEEEEEE!!!!";
+            document.getElementById('yes').hidden="hidden";
+            document.getElementById('no').hidden="hidden";
+            document.getElementById('updateYes').textContent="I'll see you this weekend silly goose!";
+        });
+    </script>
 </body>
-
 </html>
 
 
@@ -165,72 +68,59 @@ https://www.w3schools.com/js/js_loop_for.asp
 
     }
 
-    @keyframes left {
-        0% {left: 0%;}
-        100% {left: -30%;}
-    }
-
-    @keyframes right {
-        0% {right: 0%;}
-        100% {right: -30%;}
-    }
-
-    @keyframes fadein{
-        0% {opacity: 0;}
-        50% {opacity: 0;}
-        100% {opacity: 1;}
-    }
-
-    @keyframes fadeout{
-        0% {opacity: 1;}
-        100% {opacity: 0;}
-    }
-
-    .textClear {
-        animation: fadeout 2s linear forwards;
-    }
-    .textAnim {
-        animation: fadein 2s linear forwards;
-    }
-
-    .picLeft {
-        animation: left 2s forwards;
-    }
-
-    .picRight {
-        animation: right 2s forwards;
-    }
-
-    img {    
-            position: relative;
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-    .textLeft {
-        position: absolute;
-        line-height: 2;
-        font-size: 20px;
-        padding-left: 40%;
-        padding-top: 0%;
-        padding-right: 10%;
-    }
-
-    .textRight {
-        position: absolute;
-        line-height: 2;
-        font-size: 20px;
-        padding-left: 10%;
-        padding-top: 0%;
-        padding-right: 40%;
-    }
-
     .container {
-        padding-top: 7.5%;
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
+    .yes {
+        margin: 0;
+        position: absolute;
+        top: 85%;
+        left: 47%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border: 2px solid rgb(9, 255, 0);
+        color: rgb(9, 255, 0);
+    }
+
+    .yes:hover {
+        background-color: rgb(9, 255, 0);
+        border: 2px solid rgb(9, 255, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .no {
+        margin: 0;
+        position: absolute;
+        top: 85%;
+        left: 53%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        border: 2px solid rgb(255, 0, 0);
+        color: rgb(255, 0, 0);
+    }
+
+    .no:hover {
+        background-color: rgb(255, 0, 0);
+        border: 2px solid rgb(255, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+
+    .button {
+        transition-duration: 0.4s;
+        align-items: center;
+        justify-content: center;
+        background-color: #ffffff;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 30px;
+        font-family: "Brush Script MT";
+      }
+
+      #btn {
+            position: absolute;
+            transition: .5s;
+        }
 </style>
